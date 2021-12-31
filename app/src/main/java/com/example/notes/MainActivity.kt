@@ -43,6 +43,10 @@ class MainActivity : AppCompatActivity(), INotesRVAdapter {
         if(notetext.isNotEmpty()){
             viewModel.insertNote(Note(notetext))
             Toast.makeText(this,"$notetext Inserted",Toast.LENGTH_LONG).show()
+            input.setText("")
+
+        }else{
+            Toast.makeText(this,"Nothing to note down",Toast.LENGTH_LONG).show()
         }
 
     }
